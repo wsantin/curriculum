@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "modules": true,
+      "jsx": true,
+      "ecmaVersion": 6
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "Promise": true
+  },
+  "rules": {
+    "react/jsx-uses-vars": ["error"],
+        "no-unused-vars": ["error"],
+        "indent": ["warn", 2],
+        "linebreak-style": ["error", "unix"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "quotes": ["error", "single"],
+        "semi": ["error","always"],
+        "eol-last": [0],
+        "no-mixed-requires": [0],
+        "no-underscore-dangle": [0],
+        "no-console": [0]
+  }
+}
+  

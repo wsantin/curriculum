@@ -1,0 +1,7 @@
+node_modules
+client/.next
+README.md
+.next
+
+app.yaml
+.gitignore

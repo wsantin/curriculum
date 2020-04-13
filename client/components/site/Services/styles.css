@@ -1,0 +1,48 @@
+.service__article{
+    display:grid;
+    grid-template-columns:400px 550px;
+    justify-content:center;
+    grid-column-gap:90px;
+    align-items:center;
+    margin:70px 0;
+}
+
+.service__article--container{
+    padding:1.5em;
+    align-self:start;
+}
+
+.service__article--title{
+    color:#1F1D1C;
+    font-size:22px;
+    font-family: 'Merriweather', serif !important;
+    font-weight:bold;
+}
+
+.service__article--content{
+    color:#6F787E;
+    font-family: 'Roboto', sans-serif !important;
+    font-size:17px;
+}
+
+.service__article--figure{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 0px 1px;
+    border:1px solid rgba(0,0,0,0.08);
+    border-radius:10px;
+}
+
+.service__article--point{
+    font-family: 'Roboto', sans-serif !important;
+    font-size:17px;
+    color:#6F787E;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.service__article--point li{
+    margin:1.5em 0;
+    text-decoration:underline;
+}
+

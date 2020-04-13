@@ -1,0 +1,271 @@
+@import "~antd/dist/antd.less";
+@import "./antd-custom.less";
+@import "./nprogress.less";
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  min-width: 320px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+
+  *,
+  *::before,
+  *::after {
+      box-sizing: inherit;
+  }
+}
+
+body {
+  font-size: 14px !important;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.60;
+  text-rendering: optimizeLegibility;
+  font-family: 'Futura PT !important','BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue','Arial','Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+  
+}
+
+
+h1 {
+  color: #353535;
+  font-family: 'Futura PT', 'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue','Arial','Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2rem;
+  line-height: 1.25;
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  color: #000000;
+  font-family: 'Futura PT !important','BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue','Arial','Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.51572rem;
+  line-height: 1.25;
+}
+
+.icon-layer{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.layout{
+  background-color: #545454;
+  min-height: calc(~"100vh ");
+  padding: 20px;
+}
+
+.content{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.details-space{
+  padding-top:20px;
+}
+
+a{
+  color:#EAEAEA
+}
+
+i:hover{
+  color:#0098d9;
+  cursor: pointer;
+}
+
+.column-info{
+  background-color: #2B2B2B;
+  padding: 20px 40px;
+  text-align: left !important;
+
+  .title{
+    color:#EAEAEA;
+    text-align: center;
+  }
+  ul{
+    text-align: left !important;
+  }
+
+  span:hover{
+    color:#0098d9;
+    cursor: pointer;
+  }
+
+  li:hover{
+    color:#0098d9;
+    cursor: pointer;
+  }
+
+  .sub-title{
+    border-bottom: 1px solid white;
+    font-size: 15px !important;
+    font-weight: bold;
+  }
+
+  .sub-title-content{
+    padding: 13px 10px 0 10px;
+  }
+
+  .profile-photo{
+    width: 160px;
+    height: 190px;
+    border-radius: 5%;
+    text-align: center !important;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }
+  
+}
+
+
+.column-description{
+  background-color: #FFF;
+  color: #353535 !important;
+  line-height: 1.25;
+
+  .sub-title{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+  }
+  .sub-title-content{
+    padding: 13px 10px 0 10px;
+  }
+
+  .context{
+    padding: 30px 40px 0 40px;
+
+    .title{
+      padding-bottom: 15px;
+
+      .title-fin{
+        color: #3D7C6E;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.25;
+      }
+    }
+    .description{
+      text-align:justify;
+      padding:20px 0;
+    }
+
+    .time-line-item{
+      left: -150px;
+      padding:3px;
+      
+      .ant-timeline-item-content{
+        margin:0 15px;
+        width: 90%;
+        text-align:justify;
+      }
+    }
+
+  }
+  .experence{
+    padding: 10px 30px 0 30px;
+
+    .habilidades-item{
+      padding-top: 5px;
+      padding-right: 5px;
+      text-align: right !important;
+    }
+
+    .gutter-row{
+      padding:0 8px !important;
+    }
+    .ant-progress-success-bg, .ant-progress-bg{
+      background-color: #3D7C6E;
+    }
+    .ant-progress-inner{
+      background-color: #353535;
+    }
+
+  }
+
+}
+
+/* fira-sans-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/fira-sans-v10-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+  src: local('Fira Sans Medium'), local('FiraSans-Medium'),
+    url('/fonts/fira-sans-v10-latin_cyrillic-500.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/fira-sans-v10-latin_cyrillic-500.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/fonts/fira-sans-v10-latin_cyrillic-500.woff')
+      format('woff'),
+    /* Modern Browsers */
+      url('/fonts/fira-sans-v10-latin_cyrillic-500.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/fira-sans-v10-latin_cyrillic-500.svg#FiraSans')
+      format('svg'); /* Legacy iOS */
+}
+/* fira-sans-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/fira-sans-v10-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
+  src: local('Fira Sans SemiBold'), local('FiraSans-SemiBold'),
+    url('/fonts/fira-sans-v10-latin_cyrillic-600.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/fira-sans-v10-latin_cyrillic-600.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/fonts/fira-sans-v10-latin_cyrillic-600.woff')
+      format('woff'),
+    /* Modern Browsers */
+      url('/fonts/fira-sans-v10-latin_cyrillic-600.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/fira-sans-v10-latin_cyrillic-600.svg#FiraSans')
+      format('svg'); /* Legacy iOS */
+}
+/* fira-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/fira-sans-v10-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local('Fira Sans Bold'), local('FiraSans-Bold'),
+    url('/fonts/fira-sans-v10-latin_cyrillic-700.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/fira-sans-v10-latin_cyrillic-700.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/fonts/fira-sans-v10-latin_cyrillic-700.woff')
+      format('woff'),
+    /* Modern Browsers */
+      url('/fonts/fira-sans-v10-latin_cyrillic-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/fira-sans-v10-latin_cyrillic-700.svg#FiraSans')
+      format('svg'); /* Legacy iOS */
+}
+  
+@media (min-width: 768px) {
+  body {
+      font-size: 18px;
+  }
+  .layout{
+    background-color: #545454;
+    min-height: calc(~"100vh ");
+    padding: 20px;
+  }
+
+}
+ 
