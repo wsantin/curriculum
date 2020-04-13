@@ -24121,7 +24121,15 @@ i:hover {
   left: -150px;
   padding: 3px;
 }
-@media (max-width: 576px) {
+@media (max-width: 400px) {
+  .column-description .context .time-line-item {
+    left: -100px;
+    padding: 3px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 400px) and (max-width: 576px) {
   .column-description .context .time-line-item {
     left: -165px;
     padding: 3px;
