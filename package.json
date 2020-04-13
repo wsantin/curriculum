@@ -20,7 +20,7 @@
     "export": "next export",
     "clean": "rimraf node_modules/.cache && rimraf .next && rimraf out",
     "predeploy": "yarn run clean && yarn build && next export && touch out/.nojekyll",
-    "delete-deploy": "git run push origin --delete gh-pages",
+    "delete-deploy": "git push origin --delete gh-pages",
     "deploy": "yarn run predeploy && git add out && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "engines": {

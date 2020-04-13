@@ -15,7 +15,7 @@ const Index = (props) => {
             description={
                 'Curriculum Vitae'
             }
-            image={ASSET_PREFIX+'/images/logo/logo.png'}
+            image={ASSET_PREFIX+'/favicons/favicon-16x16.png'}
             title={'Curriculum Vitae'}
         >
           <main>
@@ -26,7 +26,7 @@ const Index = (props) => {
                     <Col xs={24} sm={24} md={24} lg={9} xl={9} className="column-info">
                       <div className="title">
                         <div> 
-                          <img className="profile-photo" alt="profile-photo" src="/photo.jpg" />
+                          <img className="profile-photo" alt="profile-photo" src={ASSET_PREFIX+"/photo.jpg"}/>
                         </div>
                         <div className="details-space">
                           <span>
