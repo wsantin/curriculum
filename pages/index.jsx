@@ -37,7 +37,7 @@ const Index = (props) => {
                         <div className="details-space">
                           <Row>
                             <a href="https://wa.me/51991030952?text=Interesado%20curriculum" target="_top">
-                              <Space size={13}>
+                              <Space size={2}>
                                 <div>
                                   <i className="fab fa-whatsapp"></i>
                                   <i className="fal fa-phone-volume"></i>
@@ -77,7 +77,7 @@ const Index = (props) => {
                         <div className="details-space">
                           <Row>
                             <a href="https://github.com/wsantin" target="_top">
-                              <Space size={13}>
+                              <Space size={8}>
                                 <i className="fab fa-github"></i>
                                 <div>github.com/wsantin</div>
                               </Space>
@@ -209,7 +209,7 @@ const Index = (props) => {
                                 <span>Analista en seguridad de Información. Desarrollador Aplicaciones Web. Tiempo: 1 Año</span> 
                               </div>
                             </Timeline.Item>
-                            <Timeline.Item label="2014" className="time-line-item" color="gray">
+                            <Timeline.Item label="2016" className="time-line-item" color="gray">
                               <div> 
                                 <strong>Infonet Soluciones Eirl: </strong>
                                 <span>Analista de seguridad en Aplicaciones Web y servidores. Charlas Conferencias. Tiempo: 8 Meses</span> 
