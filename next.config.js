@@ -8,12 +8,12 @@ const lessToJS = require('less-vars-to-js')
 const withCSS = require('@zeit/next-css')
 const withLess = require('@zeit/next-less')
 const withSass = require('@zeit/next-sass')
+const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin');
 
-const isProd = process.env.NODE_ENV === 'production' ? '/curriculum/' : ''
-const webpackBasePath = process.env.SPA_EXP_BUILD === 'true' ? '/curriculum/' : ''
+const isProd = process.env.NODE_ENV === 'production' ? '/curriculum' : ''
 
 //Tema Personalizado
 const themeVariables = lessToJS(
@@ -29,13 +29,12 @@ module.exports =
 				//importLoaders: 1,
 				//localIdentName: "[local]___[hash:base64:5]",
 			},
-			exportTrailingSlash:true,
-			exportPathMap: function () {
-				return {
-				  "/": { page: "/" }
-				}
-			},
-			
+			// exportTrailingSlash:true,
+			// exportPathMap: async function (defaultPathMap) {
+			// 	return {
+			// 	  '/': { page: '/' }
+			// 	}
+			// },
 			assetPrefix: isProd,
 			webpack: (config, { isServer }) => {
 				if (isServer) {
@@ -66,6 +65,9 @@ module.exports =
 				}
 
 				config.plugins.push(
+					new webpack.DefinePlugin({
+						'process.env.ASSET_PREFIX': JSON.stringify(isProd),
+					}),
 					new AntdDayjsWebpackPlugin({
 						preset: 'antdv3'
 					}),
@@ -74,10 +76,10 @@ module.exports =
 					})
 				);
 
-				config.resolve.alias["layouts"] = path.join(__dirname, "layouts");
-				config.resolve.alias["pages"] = path.join(__dirname, "pages");
-				config.resolve.alias["styles"] = path.join(__dirname, "styles");
-				config.resolve.alias["utils"] = path.join(__dirname, "utils");
+				config.resolve.alias["-layouts"] = path.join(__dirname, "layouts");
+				config.resolve.alias["-pages"] = path.join(__dirname, "pages");
+				config.resolve.alias["-styles"] = path.join(__dirname, "styles");
+				config.resolve.alias["-utils"] = path.join(__dirname, "utils");
 				
 				return config;
 			}

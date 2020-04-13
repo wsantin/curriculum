@@ -4,6 +4,7 @@ import Router from 'next/router'
 import {withRouter} from 'next/router'
 import NProgress from 'nprogress'
 import '../styles/main.less'
+import {ASSET_PREFIX} from '-utils/constants.jsx'
 
 class MyApp extends App {
   constructor() {
@@ -16,11 +17,12 @@ class MyApp extends App {
   }
   
   componentDidMount() {
+    console.log("dfgfgfg")
     const {pathname} = this.props;
 
-    if(pathname != '/' ){
-      Router.push('/')
-    }
+    // if(pathname != ASSET_PREFIX+'/' ){
+    //   Router.push(ASSET_PREFIX+'/')
+    // }
     
     const ua = navigator.userAgent;
     let userAgent;

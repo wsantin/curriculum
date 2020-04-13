@@ -2,20 +2,20 @@ import React from 'react';
 import { Row, Col, Layout, Card, Space, Timeline, Progress  } from 'antd';
 
 import Page from '../layouts/page';
-
+import {ASSET_PREFIX} from '-utils/constants.jsx'
 const { Meta } = Card;
 
 const Index = (props) => {
 
   const {userAgent} = props
-
+  console.log(ASSET_PREFIX)
   return(
     <>
         <Page
             description={
                 'Curriculum Vitae'
             }
-            image={'/images/logo/logo.png'}
+            image={ASSET_PREFIX+'/images/logo/logo.png'}
             title={'Curriculum Vitae'}
         >
           <main>
