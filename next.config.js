@@ -11,6 +11,9 @@ const withSass = require('@zeit/next-sass')
 const withPlugins = require('next-compose-plugins')
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')
 
+
+const debug = process.env.NODE_ENV !== 'production'
+
 //Tema Personalizado
 const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, './client/styles/antd-custom.less'), 'utf8')
@@ -20,6 +23,7 @@ const nextConfig = {
 		prueba: process.env.prueba || 'prueba2',
 	},
 	distDir: '.next',
+	assetPrefix: !debug ? '/curriculum/' : '',	//Dominio Github
 };
 module.exports =
   	withCSS(
@@ -31,36 +35,36 @@ module.exports =
 			localIdentName: "[local]___[hash:base64:5]",
 			},
 			webpack: (config, { isServer }) => {
-					if (isServer) {
-						config.node = {
-							fs: 'empty'
-						}
-
-						const antStyles = /antd\/.*?\/style.*?/;
-						const origExternals = [...config.externals];
-						config.externals = [
-							(context, request, callback) => {
-								if (request.match(antStyles)) return callback();
-								if (typeof origExternals[0] === 'function') {
-									origExternals[0](context, request, callback);
-								} else {
-									callback();
-								}
-							},
-							...(typeof origExternals[0] === 'function' ? [] : origExternals),
-						];
-
-						config.module.rules.unshift({
-							test: antStyles,
-							use: 'null-loader',
-						});
+				if (isServer) {
+					config.node = {
+						fs: 'empty'
 					}
 
-					config.plugins.push(
-						new AntdDayjsWebpackPlugin({
-							preset: 'antdv3'
-						})
-					);
+					const antStyles = /antd\/.*?\/style.*?/;
+					const origExternals = [...config.externals];
+					config.externals = [
+						(context, request, callback) => {
+							if (request.match(antStyles)) return callback();
+							if (typeof origExternals[0] === 'function') {
+								origExternals[0](context, request, callback);
+							} else {
+								callback();
+							}
+						},
+						...(typeof origExternals[0] === 'function' ? [] : origExternals),
+					];
+
+					config.module.rules.unshift({
+						test: antStyles,
+						use: 'null-loader',
+					});
+				}
+
+				config.plugins.push(
+					new AntdDayjsWebpackPlugin({
+						preset: 'antdv3'
+					})
+				);
 
 				return config;
 			},
