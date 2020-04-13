@@ -1,0 +1,1 @@
+{"ast":null,"code":"import title from 'title';\nexport default (function (text) {\n  return title(text, {\n    special: ['insumos', 'productos', 'cumbre', 'sullana', 'piura', 'pasteles', 'tortas', 'cremas']\n  });\n});","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import dayjs from 'dayjs';\nimport 'dayjs/locale/zh-cn';\ndayjs.locale('es');\nexport const dateTime = date => dayjs(date).locale('es').format();\nexport const full = full => dayjs(full).format('YYYY-MM-DD HH:mm:ss');","map":null,"metadata":{},"sourceType":"module"}
