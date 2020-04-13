@@ -7,9 +7,8 @@
 
 
 # production
-/client/.next
-/client/build
-/client/builds
+.next
+build
 /log
 .yarnrc
 

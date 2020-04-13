@@ -8,7 +8,6 @@ const { Meta } = Card;
 const Index = (props) => {
 
   const {userAgent} = props
-  console.log(userAgent)
 
   return(
     <>

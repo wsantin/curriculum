@@ -1,1 +1,0 @@
-{"ast":null,"code":"import title from 'title';\nexport default (text => title(text, {\n  special: ['insumos', 'productos', 'cumbre', 'sullana', 'piura', 'pasteles', 'tortas', 'cremas']\n}));","map":null,"metadata":{},"sourceType":"module"}
